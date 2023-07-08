@@ -42,8 +42,8 @@ class AutoTraderBotGroup():
         follow_order = 'https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=dc42fb29-12d4-404e-b7ee-1aa233a90bf8'
         wx = WxHelper()
         wx.robot_send(msg, follow_order)
-        # DingPushMessage.ding_push_message(msg=msg, access_token=self.diaccess_token,
-        #                                   keywords=self.keyword)
+        DingPushMessage.ding_push_message(msg=msg, access_token=self.diaccess_token,
+                                          keywords=self.keyword)
 
     def onTick(self, symbol, signal, price, qty, strategyName):
         """根据signal执行交易"""
